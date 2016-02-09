@@ -1,0 +1,21 @@
+<ion-view title="ORIX India">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <!--<div style="line-height: 250px; border: 1px solid rgb(238, 238, 238); border-radius: 3px; text-align: center; background-color: rgb(255, 255, 255);">
+            <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+        </div>-->
+        <div id="map" data-tap-disabled="true"></div>
+    	<a ng-click="centerOnMe(); goEvent();" ng-hide="going" class="button button-start button-block">Start</a>
+		<a href="#/distance" ng-click="goEvent();" ng-show="going" class="button button-stop button-block">Stop</a>
+        
+	</ion-content>
+
+</ion-view>
+
+<!--<a href="#/map1" class="button button-balanced button-block">START</a>-->
+        <!--<ion-footer-bar>
+      		<!--<a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Start</a>-->
+      		
+    	
+    <!--<ion-footer-bar class="bar-assertive">
+      <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Stop</a>
+    </ion-footer-bar>-->

@@ -1,0 +1,49 @@
+.bar-custom
+{
+	background-color:#b3e0ff!important;
+	/*font-weight:bold;
+	font-style:italic;*/
+	font-family: 'Amaranth', sans-serif!important;
+	color:white;
+	
+}
+
+#map
+{
+	height:100%;
+	width:100%;
+}
+
+.scroll
+{
+	height:100%;
+}
+
+.button-go
+{
+	background-color:#006698;/*#ffff1a#ff3385#ff0066:#BF3656;#cc0000#990000#cc0044#ff0055 */
+	font-family: 'Amaranth', sans-serif!important;
+	color:white;
+}
+
+.button-start
+{
+	background-color:#195f35;
+	border-radius: 10px;
+	color: white;
+}
+
+.button-stop
+{
+	background-color:#ba312b;
+	border-radius: 10px;
+	color: white;
+}
+
+a:hover
+{
+	color: white!important;
+}
+
+
+
