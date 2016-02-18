@@ -1,0 +1,28 @@
+<ion-view title="ORIX India">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <form class="list">
+            <div style="text-align:center;">
+                <img src="img/final.jpg" width="100%" height="auto">
+            </div>
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">Username :</span>
+                    <input type="text" placeholder="e.g.Orix">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password :</span>
+                    <input type="password" placeholder="e.g.Orix@123">
+                </label>
+            </ion-list>
+            <label class="item item-select">
+                <span class="input-label">User Type</span>
+                <select>
+                    <option>Driver</option>
+                    <option>Superviser</option>
+                </select>
+            </label>
+            <div class="spacer" style="height: 40px;"></div>
+            <a ui-sref="map" class="button button-positive button-block">Log in</a>
+        </form>
+    </ion-content>
+</ion-view>

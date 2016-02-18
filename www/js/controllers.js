@@ -1,31 +1,30 @@
 angular.module('app.controllers', [])
   
-.controller('startUpCtrl', function($scope, $state) {
-  /* $state.go('map',{}, {reload: true});*/
+.controller('startUpCtrl', function($scope) {
+  /* $state.go('map',{}, {reload: true});
   $scope.login = function(){
     $state.go('map');
-  };
+  };*/
 })
-
+.controller('loginCtrl',function($scope){
+  
+})
    
 .controller('mapCtrl', function($scope, $state, $ionicLoading, $compile) {
-	  $state.go('map',{}, {reload: true});
+  $state.go('map',{}, {reload: true});
+
+	  
   /*To change the color from green to red*/
-  $scope.going = false;
-	$scope.goEvent = function(){
-   /*$state.go('map',{}, {reload: true});*/
-   $scope.going = !$scope.going;
-   if($scope.going){  
-       $scope.go();
-   }
-   else
-   {
-       $scope.stop();
-   } 
-     
-  };
-  /*Tripmeter function  google.maps.event.addDomListener(window, 'load', function()*/
-   google.maps.event.addDomListener(window, 'load', function() {
+
+  window.onload = function() {
+  var startPos;
+  navigator.geolocation.getCurrentPosition(function(position) {
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  });
+
+google.maps.event.addDomListener(window, 'load', function() {
         var myLatlng = new google.maps.LatLng(37.3000, -120.4833);
  
         var mapOptions = {
@@ -47,17 +46,48 @@ angular.module('app.controllers', [])
  
         $scope.map = map;
     });
+    };
+  $scope.going = false;
+	$scope.goEvent = function(){
+  $state.go('map',{}, {reload: true});
+   $scope.going = !$scope.going;
+   if($scope.going){  
+       $scope.go();
+   }
+   else
+   {
+       $scope.stop();
+   } 
+     
+  };
+  /*Tripmeter function  google.maps.event.addDomListener(window, 'load', function()*/
+   
 
 
-  window.onload = function() {
-  var startPos;
-  navigator.geolocation.getCurrentPosition(function(position) {
-    startPos = position;
-    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
-    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
-  });
-};
 
+  google.maps.event.addDomListener(window, 'load', function() {
+      var myLatlng = new google.maps.LatLng(37.3000, -120.4833);
+ 
+      var mapOptions = 
+      {
+            center: myLatlng,
+            zoom: 16,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+ 
+      var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+ 
+      navigator.geolocation.getCurrentPosition(function(pos) {
+            map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+            var myLocation = new google.maps.Marker({
+                position: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
+                map: map,
+                title: "My Location"
+            });
+        });
+ 
+        $scope.map = map;
+    });
 
   
   
@@ -116,28 +146,7 @@ angular.module('app.controllers', [])
         alert('Example of infowindow with ng-click')
       };*/
 
-      google.maps.event.addDomListener(window, 'load', function() {
-        var myLatlng = new google.maps.LatLng(37.3000, -120.4833);
- 
-        var mapOptions = {
-            center: myLatlng,
-            zoom: 16,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
- 
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
- 
-        navigator.geolocation.getCurrentPosition(function(pos) {
-            map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
-            var myLocation = new google.maps.Marker({
-                position: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
-                map: map,
-                title: "My Location"
-            });
-        });
- 
-        $scope.map = map;
-    });
+     
 })/*End of map controller*/
 
 .controller('distanceCtrl', function($scope) {
@@ -146,6 +155,7 @@ angular.module('app.controllers', [])
 .controller('detailsCtrl', function($scope) {
 
 })
+
 .controller('chartCtrl', function($scope) {
 
 })

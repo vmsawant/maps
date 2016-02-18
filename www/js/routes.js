@@ -13,31 +13,32 @@ angular.module('app.routes', [])
       templateUrl: 'templates/startUp.html',
       controller: 'startUpCtrl'
     })
-    
-    
+    .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'loginCtrl'
+    })
     .state('map', {
       url: '/map',
       templateUrl: 'templates/map.html',
       controller: 'mapCtrl'
     })
-   .state('distance', {
+    .state('distance', {
       url: '/distance',
       templateUrl: 'templates/distance.html',
       controller: 'distanceCtrl'
     })
-   .state('chart', {
+    .state('chart', {
       url: '/chart',
       templateUrl: 'templates/chart.html',
       controller: 'chartCtrl'
     })
-    
     .state('details', {
-      url: '/details',
+      url: '/details-back',
       templateUrl: 'templates/details.html',
       controller: 'detailsCtrl'
     })
-    
-    .state('mytrips', {
+   .state('mytrips', {
       url: '/my-trips',
       templateUrl: 'templates/mytrips.html',
       controller: 'mytripsCtrl'
