@@ -1,11 +1,22 @@
 .bar-custom
 {
-	background-color:#b3e0ff!important;
+	background-color:#cc9966!important;
 	/*font-weight:bold;
 	font-style:italic;*/
 	font-family: 'Amaranth', sans-serif!important;
-	color:white;
+	/*color:white;*/
 	
+}
+
+img
+{
+	height:100%;
+	width:100%;
+}
+
+.rotate
+{
+	transform: translate3d(360deg,0deg,0deg);
 }
 
 #map
@@ -21,21 +32,22 @@
 
 .button-go
 {
-	background-color:#006698;/*#ffff1a#ff3385#ff0066:#BF3656;#cc0000#990000#cc0044#ff0055 */
+	background-color:#cc9966;/*###006698b3e0ffffff1a#ff3385#ff0066:#BF3656;#cc0000#990000#cc0044#ff0055#ff0055 */
 	font-family: 'Amaranth', sans-serif!important;
-	color:white;
+	border-radius: 5px;
+	/*color:white;*/
 }
 
 .button-start
 {
-	background-color:#195f35;
+	background-color:#009900;
 	border-radius: 10px;
 	color: white;
 }
 
 .button-stop
 {
-	background-color:#ba312b;
+	background-color:#ff0000;
 	border-radius: 10px;
 	color: white;
 }
@@ -43,6 +55,7 @@
 a:hover
 {
 	color: white!important;
+	text-decoration: none;
 }
 
 

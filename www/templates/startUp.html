@@ -1,4 +1,4 @@
-<ion-view title="ORIX India">
+<ion-view title="ORIX India" ng-controller="mapCtrl" ng-init="initialize();">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
         <!--<div>
             <p class="text-center">
@@ -10,9 +10,11 @@
                 
             </p>
         </div>
-        <div style="text-align:center;">
-            <img src="img/orix.jpg" width="100%" height="100%">
+        <div class="rotate">
+            <img src="img/orix.jpg">
         </div>
-        <a ng-click="centerOnMe();" href="#/map" class="button button-go button-block ">Go</a>
+        <a href="#/map" class="button button-go button-block ">Go</a>
     </ion-content>
 </ion-view>
+
+<!--"centerOnMe(); ng-click=changeView('map')"-->
