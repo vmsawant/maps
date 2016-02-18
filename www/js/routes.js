@@ -8,45 +8,40 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
     
-      
-        
     .state('startUp', {
       url: '/startup',
       templateUrl: 'templates/startUp.html',
       controller: 'startUpCtrl'
     })
-        
-      
     
-      
-        
+    
     .state('map', {
       url: '/map',
       templateUrl: 'templates/map.html',
       controller: 'mapCtrl'
     })
-        
-      
-    
-      
-        
-    .state('map2', {
-      url: '/map1',
-      templateUrl: 'templates/map2.html',
-      controller: 'map2Ctrl'
-    })
-        
-      
-    
-      
-        
-    .state('distance', {
+   .state('distance', {
       url: '/distance',
       templateUrl: 'templates/distance.html',
       controller: 'distanceCtrl'
     })
-        
-      
+   .state('chart', {
+      url: '/chart',
+      templateUrl: 'templates/chart.html',
+      controller: 'chartCtrl'
+    })
+    
+    .state('details', {
+      url: '/details',
+      templateUrl: 'templates/details.html',
+      controller: 'detailsCtrl'
+    })
+    
+    .state('mytrips', {
+      url: '/my-trips',
+      templateUrl: 'templates/mytrips.html',
+      controller: 'mytripsCtrl'
+    })
     ;
 
   // if none of the above states are matched, use this as the fallback

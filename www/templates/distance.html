@@ -1,15 +1,21 @@
-<ion-view title="ORIX India" style="background-color:#f9f2ec">
+<ion-view title="ORIX India">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
-        <div id="tripmeter">
- 			<!--<h1 style="font-family: 'Sail', cursive;font-style:bold;" class="text-center">ORIX India</h1>-->
-
-            <p>Start time :</p>
-
-            <p>End time :</p>
-
-            <p>Distance Covered :</p>
-
-            <p>Total Cost :</p>
+        <div class="list card">
+            <div class="item item-divider">Trip Details</div>
+            <div class="item item-body">
+                <ion-list>
+                    <ion-item class="item-divider">Start Time</ion-item>
+                    <ion-item class="item-divider">End Time</ion-item>
+                    <ion-item class="item-divider">Distance</ion-item>
+                    <ion-item class="item-divider">Total Cost</ion-item>
+                </ion-list>
+            </div>
+        </div>
+        <ion-list></ion-list>
+        <div class="button-bar"></div>
+        <div class="button-bar">
+            <a ui-sref="mytrips" class="button button-stable button-block ">My Trips</a>
+            <a ui-sref="chart" class="button button-stable button-block ">S.Chart</a>
         </div>
     </ion-content>
 </ion-view>

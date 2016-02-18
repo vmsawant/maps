@@ -1,10 +1,12 @@
 angular.module('app.controllers', [])
   
-.controller('startUpCtrl', function($scope) {
-  
-	/* $state.go('map',{}, {reload: true});*/
-
+.controller('startUpCtrl', function($scope, $state) {
+  /* $state.go('map',{}, {reload: true});*/
+  $scope.login = function(){
+    $state.go('map');
+  };
 })
+
    
 .controller('mapCtrl', function($scope, $state, $ionicLoading, $compile) {
 	  $state.go('map',{}, {reload: true});
@@ -136,18 +138,22 @@ angular.module('app.controllers', [])
  
         $scope.map = map;
     });
+})/*End of map controller*/
 
-
-      
-})
-   
-.controller('map2Ctrl', function($scope) {
-
-})
-   
 .controller('distanceCtrl', function($scope) {
 
 })
+.controller('detailsCtrl', function($scope) {
+
+})
+.controller('chartCtrl', function($scope) {
+
+})
+.controller('mytripsCtrl', function($scope) {
+
+})
+   
+
 
 
 
