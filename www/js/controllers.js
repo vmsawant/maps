@@ -31,6 +31,21 @@ angular.module('app.controllers', ['ionic', 'ngCordova'])
   }, function(error){
     console.log("Could not get location");
   });   
+
+  /*To change the color from green to red*/
+  $scope.going = false;
+  $scope.goEvent = function()
+  {
+    $scope.going = !$scope.going;
+    if($scope.going)
+    {  
+       $scope.go();
+    }
+    else
+    {
+       $scope.stop();
+    } 
+  }
 })/*End of map controller*/
 
 .controller('distanceCtrl', function($scope) {
