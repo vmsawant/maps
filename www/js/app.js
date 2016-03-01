@@ -20,4 +20,8 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
     }
   });
 })
+.config(function($ionicConfigProvider) {
+  $ionicConfigProvider.backButton.text('').icon('ion-chevron-left');
+  $ionicConfigProvider.backButton.previousTitleText('').icon('ion-chevron-left');
+});
 
